@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bookshelf Apps</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+  <header class="head_bar">
+    <h1 class="head_bar__title">Bookshelf Apps</h1>
+  </header>
+  <main>
+    <section class="input_section">
+      <h2>Masukkan Buku Baru</h2>
+      <form id="formDataBuku">
+        <div class="input">
+          <label for="judul">Judul</label>
+          <input id="judul" type="text" placeholder="Judul" required>
+        </div>
+        <div class="input">
+          <label for="penulis">Penulis</label>
+          <input id="penulis" type="text" placeholder="Penulis" required>
+        </div>
+        <div class="input">
+          <label for="tahun">Tahun Terbit</label>
+          <input id="tahun" type="number" placeholder="Tahun Terbit" required>
+        </div>
+        <div class="input_inline">
+          <label for="isRead">Selesai dibaca</label>
+          <input id="isRead" type="checkbox">
+        </div>
+
+        <!-- <button id="bookSubmit" type="submit">Masukkan Buku ke rak <span>Belum selesai dibaca</span></button> -->
+        <button type="submit">Simpan</button>
+
+      </form>
+    </section>
+
+    <section class="search_section">
+      <h2>Cari Buku</h2>
+      <form id="formSearch" action="" method="post">
+        <label for="pencarian">Judul</label>
+        <!-- <input id="searchBookTitle" type="text"> -->
+        <input type="text" name="pencarian" id="pencarian" placeholder="">
+        <button type="submit">Cari</button>
+      </form>
+    </section>
+
+    <section class="book_shelf">
+      <h2>Belum selesai dibaca</h2>
+      <div id="belumDibaca" class="book_list"></div>
+    </section>
+
+    <section class="book_shelf">
+      <h2>Selesai dibaca</h2>
+      <div id="sudahDibaca" class="book_list"></div>
+    </section>
+  </main>
+
+
+</body>
+<script src="script.js"></script>
+<!-- <script src="js/main.js"></script>
+<script src="js/localstorage.js"></script> -->
+</html>
